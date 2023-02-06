@@ -10,38 +10,38 @@ jobs:
     build:
     runs-on: ubuntu-latest
     steps:
-        - uses: act10ns/slack@v1
-        with:
-            status: starting
-            channel: '#workflows'
-            message: Starting Build ...
+    - uses: act10ns/slack@v1
+    with:
+        status: starting
+        channel: '#workflows'
+        message: Starting Build ...
+    if: always()
+    - name: Checkout
+    uses: actions/checkout@v2
+
+    - name: Install fastlane
+    run: |
+        bundle install
+
+    - name: Execute fastlane
+    run: |
+        bundle exec fastlane test
+
+    - name: Report Status Failure
         if: always()
-        - name: Checkout
-        uses: actions/checkout@v2
-
-        - name: Install fastlane
-        run: |
-            bundle install
-
-        - name: Execute fastlane
-        run: |
-            bundle exec fastlane test
-
-        - name: Report Status Failure
-            if: always()
-            uses: act10ns/slack@v1
-            with:
-                status: ${{ job.status }}
-                notify_when: 'success,failure,cancelled,warnings,skipped'
-                notification_title: '{workflow} has {status_message}'
-                message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>'
-                footer: 'Linked to Repo <{repo_url}|{repo}>'
-                steps: ${{ toJson(steps) }}
-                channel: '#cicd-github'
-                config: .github/config/slack.yml
-            env:
-                SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-                GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        uses: act10ns/slack@v1
+        with:
+            status: ${{ job.status }}
+            notify_when: 'success,failure,cancelled,warnings,skipped'
+            notification_title: '{workflow} has {status_message}'
+            message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>'
+            footer: 'Linked to Repo <{repo_url}|{repo}>'
+            steps: ${{ toJson(steps) }}
+            channel: '#cicd-github'
+            config: .github/config/slack.yml
+        env:
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+            GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
 #    runs-on: macos-latest
 #    # 4
