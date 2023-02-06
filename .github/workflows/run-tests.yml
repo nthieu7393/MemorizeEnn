@@ -35,7 +35,10 @@ jobs:
         uses: ravsamhq/notify-slack-action@v1
         with:
             status: ${{ job.status }}
-            notify_when: 'success'
+            notify_when:
+              description: Specify on which events a slack notification is sent
+              required: false
+              default: "success,failure,cancelled,warnings,skipped"
             notification_title: '{workflow} has {status_message}'
             message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>'
             footer: 'Linked to Repo <{repo_url}|{repo}>'
