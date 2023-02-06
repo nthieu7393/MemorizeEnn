@@ -36,9 +36,9 @@ jobs:
           steps: ${{ toJson(steps) }}
           channel: '#cicd-github'
           config: .github/config/slack.yml
-  env:
-    SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-    GITHUB_TOKEN: ${{ secrets.TOKEN }}
+#  env:
+#    SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+#    GITHUB_TOKEN: ${{ secrets.TOKEN }}
 #
 #    runs-on: macos-latest
 #    # 4
