@@ -13,7 +13,7 @@ jobs:
       - uses: act10ns/slack@v1
         if: always()
         with:
-          status: starting
+          status: ${{ job.status }}
           channel: '#cicd-github'
           message: Starting Build ...
 
