@@ -3,7 +3,7 @@ name: Run tests
 
 # 2
 on:
-  [push, pull_request, issues, build]
+  [push, pull_request, issues]
 
 # 3
 jobs:
@@ -32,7 +32,7 @@ jobs:
     steps:
       - name: Report Status Failure
         if: always()
-        uses: ravsamhq/notify-slack-action@v1
+        uses: act10ns/slack@v1
         with:
             status: ${{ job.status }}
             notify_when: 'success,failure,cancelled,warnings,skipped'
