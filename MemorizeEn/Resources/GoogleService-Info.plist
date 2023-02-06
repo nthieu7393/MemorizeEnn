@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>721348572109-de3s0979eebf9p74ukcu38a2r1jk0oag.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.721348572109-de3s0979eebf9p74ukcu38a2r1jk0oag</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCS9sq2iWdpm-nNy8iWD9eoyhDkPip-zAY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>721348572109</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.caigivay.quizzie.Quizzie</string>
+	<key>PROJECT_ID</key>
+	<string>quizzie-8e234</string>
+	<key>STORAGE_BUCKET</key>
+	<string>quizzie-8e234.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:721348572109:ios:387c54e19ae6453eb00a84</string>
+</dict>
+</plist>

@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  Quizzie
+
+  Created by hieu nguyen on 02/11/2022.
+  
+*/
+"logout" = "Đăng xuất";
+"set" = "Học phần";
+"studying" = "Đang học";
+"favorite" = "Ưa thích";
+"review" = "Ôn tập";
+"trash" = "Đã xoá";
+"create_new_set" = "Tạo mới";
+"words" = "Từ";
+"type_set_name" = "Nhập tên học phần";
+"term" = "Term";
+"definition" = "Definition";
+"example" = "Example";
+"signin" = "Đăng nhập";
+"signup" = "Đăng ký";
+"signin_note" = "Bạn đang sử dụng ứng dụng mà không đăng nhập tài khoản. Dữ liệu của bạn có nguy cơ bị mất";
+"signin_success" = "Đăng nhập thành công";
+"email" = "Email";
+"password" = "Mật khẩu";
+"signin_with_email" = "Đăng Nhập Bằng Email";
+"quickly_signin_with" = "Đăng Nhập Nhanh Bằng";
+"or" = "Hoặc";
