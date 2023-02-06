@@ -43,4 +43,5 @@ jobs:
             message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>'
             footer: 'Linked to Repo <{repo_url}|{repo}>'
         env:
-            SLACK_WEBHOOK_URL: ${{ secrets.MEMORIZEEN_SLACK_WEBHOOK_URL }}
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+            GITHUB_TOKEN: ${{ secrets.TOKEN }}
