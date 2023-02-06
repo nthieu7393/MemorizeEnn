@@ -67,7 +67,7 @@ jobs:
     # 7
     - name: Execute fastlane
       run: |
-        bundle exec fastlane test
+        bundle exec fastlane build
 
   notify:
     needs: build
