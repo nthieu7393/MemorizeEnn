@@ -3,7 +3,7 @@ name: Run tests
 
 # 2
 on:
-  push
+  [push, pull_request, issues, build]
 
 # 3
 jobs:
@@ -39,6 +39,8 @@ jobs:
             notification_title: '{workflow} has {status_message}'
             message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>'
             footer: 'Linked to Repo <{repo_url}|{repo}>'
+            steps: ${{ toJson(steps) }}
+            channel: '#cicd-github'
         env:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
             GITHUB_TOKEN: ${{ secrets.TOKEN }}
