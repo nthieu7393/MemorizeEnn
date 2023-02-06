@@ -10,7 +10,8 @@ jobs:
   notifys:
     runs-on: ubuntu-latest
     steps:
-      - uses: act10ns/slack@v1
+      - name: Report smt
+        uses: act10ns/slack@v1
         if: always()
         with:
           status: ${{ job.status }}
